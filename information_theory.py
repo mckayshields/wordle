@@ -10,6 +10,10 @@ Date 9/26/23
 import numpy as np
 import wordle
 import random
+import tarfile
+
+with tarfile.open('all_guess_results.npy.tar.gz', 'r:gz') as tar:
+    tar.extractall()
 
 # Problem 1
 def get_guess_result(guess, true_word):
